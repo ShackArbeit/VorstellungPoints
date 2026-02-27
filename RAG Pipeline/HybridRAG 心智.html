@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"Hybrid RAG&#xff08;&#x6df7;&#x5408;&#x5f0f;&#x6aa2;&#x7d22;&#x751f;&#x6210;, Hybrid Retrieval-Augmented Generation&#xff09;","children":[{"content":"&#x70ba;&#x4ec0;&#x9ebc;&#x4f01;&#x696d;&#x9700;&#x8981; Hybrid RAG&#xff1f;","children":[{"content":"&#x95dc;&#x9375;&#x5b57;&#x641c;&#x5c0b;&#xff08;BM25, Keyword Search&#xff09;","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"&#x8a9e;&#x610f;&#x641c;&#x5c0b;&#xff08;Vector Search, Semantic Search&#xff09;","children":[],"payload":{"tag":"li","lines":"7,9"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x4f01;&#x696d;&#x8cc7;&#x6599;&#x7684;&#x7279;&#x6027;","children":[{"content":"&#x6cd5;&#x5f8b;&#x689d;&#x6587;&#x7de8;&#x865f;&#xff08;Legal Article Numbers&#xff09;","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"&#x6280;&#x8853;&#x578b;&#x865f;&#xff08;Model Numbers&#xff09;","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"&#x5167;&#x90e8;&#x4ee3;&#x78bc;&#xff08;Internal Codes&#xff09;","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"&#x516c;&#x53f8;&#x540d;&#x7a31;&#xff08;Company Names&#xff09;","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"&#x4eba;&#x540d;&#xff08;Personal Names&#xff09;","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"&#x5c08;&#x6709;&#x540d;&#x8a5e;&#xff08;Proper Nouns&#xff09;","children":[],"payload":{"tag":"li","lines":"22,24"}}],"payload":{"tag":"h2","lines":"13,14"}},{"content":"&#x8a9e;&#x610f;&#x641c;&#x5c0b;&#xff08;Vector Search, Semantic Search&#xff09;","children":[{"content":"&#x539f;&#x7406;","children":[],"payload":{"tag":"h3","lines":"30,31"}},{"content":"&#x512a;&#x9ede;","children":[{"content":"&#x80fd;&#x7406;&#x89e3;&#x81ea;&#x7136;&#x8a9e;&#x8a00;","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"&#x80fd;&#x8655;&#x7406;&#x4e0d;&#x540c;&#x8aaa;&#x6cd5;","children":[],"payload":{"tag":"li","lines":"36,38"}}],"payload":{"tag":"h3","lines":"34,35"}},{"content":"&#x7f3a;&#x9ede;","children":[{"content":"&#x5c0d;&#x6578;&#x5b57;&#x8207;&#x689d;&#x6587;&#x53ef;&#x80fd;&#x4e0d;&#x5920;&#x7cbe;&#x6e96;","children":[],"payload":{"tag":"li","lines":"39,41"}}],"payload":{"tag":"h3","lines":"38,39"}}],"payload":{"tag":"h2","lines":"28,29"}},{"content":"&#x95dc;&#x9375;&#x5b57;&#x641c;&#x5c0b;&#xff08;BM25, Sparse Retrieval&#xff09;","children":[{"content":"&#x539f;&#x7406;","children":[],"payload":{"tag":"h3","lines":"45,46"}},{"content":"&#x512a;&#x9ede;","children":[{"content":"&#x7cbe;&#x6e96;&#x5339;&#x914d;&#x689d;&#x6587;&#x8207;&#x578b;&#x865f;","children":[],"payload":{"tag":"li","lines":"49,50"}},{"content":"&#x9069;&#x5408;&#x6cd5;&#x5f8b;&#x8207;&#x91d1;&#x878d;&#x5834;&#x666f;","children":[],"payload":{"tag":"li","lines":"50,52"}}],"payload":{"tag":"h3","lines":"48,49"}},{"content":"&#x7f3a;&#x9ede;","children":[{"content":"&#x4e0d;&#x7406;&#x89e3;&#x8a9e;&#x610f;","children":[],"payload":{"tag":"li","lines":"53,55"}}],"payload":{"tag":"h3","lines":"52,53"}}],"payload":{"tag":"h2","lines":"43,44"}},{"content":"Hybrid RAG &#x7684;&#x505a;&#x6cd5;","children":[{"content":"1. &#x540c;&#x6642;&#x9032;&#x884c;&#xff1a;","children":[{"content":"BM25 &#x641c;&#x5c0b;","children":[],"payload":{"tag":"li","lines":"60,61"}},{"content":"Vector &#x641c;&#x5c0b;","children":[],"payload":{"tag":"li","lines":"61,62"}}],"payload":{"tag":"li","lines":"59,62","listIndex":1}},{"content":"2. &#x5408;&#x4f75;&#x7d50;&#x679c;","children":[],"payload":{"tag":"li","lines":"62,63","listIndex":2}},{"content":"3. &#x4ea4;&#x7d66;&#x5927;&#x578b;&#x8a9e;&#x8a00;&#x6a21;&#x578b;&#xff08;LLM, Large Language Model&#xff09;&#x751f;&#x6210;&#x7b54;&#x6848;","children":[],"payload":{"tag":"li","lines":"63,65","listIndex":3}}],"payload":{"tag":"h2","lines":"57,58"}},{"content":"&#x4f55;&#x6642;&#x5fc5;&#x9808;&#x4f7f;&#x7528; Hybrid&#xff1f;","children":[{"content":"&#x6cd5;&#x5f8b;&#x689d;&#x6587;","children":[],"payload":{"tag":"li","lines":"71,72"}},{"content":"&#x91d1;&#x878d;&#x4ee3;&#x78bc;","children":[],"payload":{"tag":"li","lines":"72,73"}},{"content":"&#x6280;&#x8853;&#x578b;&#x865f;","children":[],"payload":{"tag":"li","lines":"73,74"}},{"content":"&#x5c08;&#x6709;&#x540d;&#x8a5e;&#xff08;Proper Nouns&#xff09;","children":[],"payload":{"tag":"li","lines":"74,75"}},{"content":"&#x4f01;&#x696d;&#x5167;&#x90e8;&#x5c08;&#x540d;","children":[],"payload":{"tag":"li","lines":"75,77"}}],"payload":{"tag":"h2","lines":"67,68"}},{"content":"&#x7cfb;&#x7d71;&#x67b6;&#x69cb;&#x89d2;&#x8272;&#x5206;&#x5de5;","children":[{"content":"Next.js&#xff08;&#x524d;&#x7aef;&#x6846;&#x67b6;, Frontend Framework&#xff09;","children":[{"content":"&#x4f7f;&#x7528;&#x8005;&#x4ecb;&#x9762;","children":[],"payload":{"tag":"li","lines":"86,87"}},{"content":"&#x986f;&#x793a;&#x7b54;&#x6848;","children":[],"payload":{"tag":"li","lines":"87,88"}},{"content":"&#x986f;&#x793a;&#x5f15;&#x7528;&#x4f86;&#x6e90;&#xff08;Citation&#xff09;","children":[],"payload":{"tag":"li","lines":"88,89"}},{"content":"&#x767b;&#x5165;&#x8207;&#x6b0a;&#x9650;&#x63a7;&#x5236;","children":[],"payload":{"tag":"li","lines":"89,91"}}],"payload":{"tag":"h3","lines":"83,84"}},{"content":"NestJS&#xff08;&#x5f8c;&#x7aef;&#x6846;&#x67b6;, Backend Framework&#xff09;","children":[{"content":"&#x540c;&#x6642;&#x547c;&#x53eb; BM25 &#x8207; Vector &#x641c;&#x5c0b;","children":[],"payload":{"tag":"li","lines":"96,97"}},{"content":"&#x5408;&#x4f75;&#x641c;&#x5c0b;&#x7d50;&#x679c;","children":[],"payload":{"tag":"li","lines":"97,98"}},{"content":"&#x547c;&#x53eb; AI &#x6a21;&#x578b;&#xff08;LLM&#xff09;","children":[],"payload":{"tag":"li","lines":"98,99"}},{"content":"&#x63a7;&#x5236;&#x5b89;&#x5168;&#x8207;&#x5be9;&#x8a08;&#x7d00;&#x9304;&#xff08;Audit Log&#xff09;","children":[],"payload":{"tag":"li","lines":"99,101"}}],"payload":{"tag":"h3","lines":"93,94"}}],"payload":{"tag":"h2","lines":"81,82"}},{"content":"&#x7c21;&#x55ae;&#x6bd4;&#x55bb;","children":[{"content":"&#x8a9e;&#x610f;&#x641c;&#x5c0b; = &#x554f;&#x5716;&#x66f8;&#x9928;&#x54e1;","children":[],"payload":{"tag":"li","lines":"107,108"}},{"content":"&#x95dc;&#x9375;&#x5b57;&#x641c;&#x5c0b; = &#x81ea;&#x5df1;&#x67e5;&#x7d22;&#x5f15;","children":[],"payload":{"tag":"li","lines":"108,109"}},{"content":"Hybrid = &#x5169;&#x7a2e;&#x65b9;&#x5f0f;&#x540c;&#x6642;&#x4f7f;&#x7528;","children":[],"payload":{"tag":"li","lines":"109,111"}}],"payload":{"tag":"h2","lines":"103,104"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>
