@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"LLM + Knowledge Datastore &#x6d41;&#x7a0b;&#x67b6;&#x69cb;&#x8aaa;&#x660e;","children":[{"content":"1&#xfe0f;&#x20e3; Data Pipeline&#xff08;&#x8cc7;&#x6599;&#x7ba1;&#x9053;&#xff09;","children":[{"content":"&#x5c07;&#x5404;&#x7a2e;&#x8cc7;&#x6599;&#x4f86;&#x6e90;&#x532f;&#x5165; Knowledge Datastore","children":[],"payload":{"tag":"li","lines":"3,4"}},{"content":"&#x8cc7;&#x6599;&#x4f86;&#x6e90;&#x5305;&#x542b;&#xff1a;","children":[{"content":"&#x7d50;&#x69cb;&#x5316;&#x8cc7;&#x6599;&#xff08;Structured&#xff09;","children":[{"content":"Network","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"Billing","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"CRM","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"Ordering","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"Usage","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Inventory","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"li","lines":"5,12"}},{"content":"&#x975e;&#x7d50;&#x69cb;&#x5316; / &#x534a;&#x7d50;&#x69cb;&#x5316;&#x8cc7;&#x6599;","children":[{"content":"Clickstream","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"Sensors","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"Machine Logs","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"Social","children":[],"payload":{"tag":"li","lines":"16,17"}}],"payload":{"tag":"li","lines":"12,17"}}],"payload":{"tag":"li","lines":"4,17"}},{"content":"&#x76ee;&#x7684;&#xff1a;","children":[{"content":"&#x6574;&#x7406;&#x3001;&#x6e05;&#x6d17;&#x3001;&#x8f49;&#x63db;&#x8cc7;&#x6599;","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"&#x5efa;&#x7acb;&#x53ef;&#x4f9b;&#x67e5;&#x8a62;&#x7684;&#x77e5;&#x8b58;&#x5132;&#x5b58;&#x9ad4;&#x7cfb;","children":[],"payload":{"tag":"li","lines":"19,21"}}],"payload":{"tag":"li","lines":"17,21"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"2&#xfe0f;&#x20e3; Ask&#xff08;&#x4f7f;&#x7528;&#x8005;&#x63d0;&#x554f;&#xff09;","children":[{"content":"&#x4f7f;&#x7528;&#x8005;&#x63d0;&#x51fa;&#x554f;&#x984c;","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"&#x9032;&#x5165;&#x7cfb;&#x7d71;&#x67e5;&#x8a62;&#x6d41;&#x7a0b;","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"&#x554f;&#x984c;&#x53ef;&#x80fd;&#x662f;&#xff1a;","children":[{"content":"&#x554f;&#x7b54;&#xff08;Q&amp;A&#xff09;","children":[],"payload":{"tag":"li","lines":"27,28"}},{"content":"&#x6545;&#x4e8b;&#x751f;&#x6210;&#xff08;Story Generation&#xff09;","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"&#x8cc7;&#x6599;&#x5206;&#x6790;","children":[],"payload":{"tag":"li","lines":"29,31"}}],"payload":{"tag":"li","lines":"26,31"}}],"payload":{"tag":"h2","lines":"23,24"}},{"content":"3&#xfe0f;&#x20e3; LLM &#x8a9e;&#x610f;&#x7406;&#x89e3;&#xff08;Interpret Meaning&#xff09;","children":[{"content":"&#x900f;&#x904e; API &#x547c;&#x53eb;&#x5927;&#x578b;&#x8a9e;&#x8a00;&#x6a21;&#x578b;&#xff08;LLM&#xff09;","children":[{"content":"Gemini","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"OpenAI","children":[],"payload":{"tag":"li","lines":"36,37"}},{"content":"Azure OpenAI","children":[],"payload":{"tag":"li","lines":"37,38"}},{"content":"LLaMA (Meta)","children":[],"payload":{"tag":"li","lines":"38,39"}},{"content":"Mistral AI","children":[],"payload":{"tag":"li","lines":"39,40"}},{"content":"Claude","children":[],"payload":{"tag":"li","lines":"40,41"}}],"payload":{"tag":"li","lines":"34,41"}},{"content":"&#x529f;&#x80fd;&#xff1a;","children":[{"content":"&#x7406;&#x89e3;&#x4f7f;&#x7528;&#x8005;&#x554f;&#x984c;&#x8a9e;&#x610f;","children":[],"payload":{"tag":"li","lines":"42,43"}},{"content":"&#x5206;&#x6790;&#x5b57;&#x8a5e;&#x8207;&#x4e0a;&#x4e0b;&#x6587;&#x95dc;&#x4fc2;","children":[],"payload":{"tag":"li","lines":"43,44"}},{"content":"&#x63a8;&#x5c0e;&#x610f;&#x5716;&#xff08;Intent Recognition&#xff09;","children":[],"payload":{"tag":"li","lines":"44,46"}}],"payload":{"tag":"li","lines":"41,46"}}],"payload":{"tag":"h2","lines":"33,34"}},{"content":"4&#xfe0f;&#x20e3; Augment Prompt&#xff08;&#x63d0;&#x793a;&#x8a5e;&#x589e;&#x5f37;&#xff09;","children":[{"content":"&#x6839;&#x64da;&#x8a9e;&#x610f;&#x8207;&#x95dc;&#x806f;&#x95dc;&#x4fc2;&#x751f;&#x6210;&#x67e5;&#x8a62;&#x689d;&#x4ef6;","children":[],"payload":{"tag":"li","lines":"49,50"}},{"content":"&#x884c;&#x70ba;&#x793a;&#x4f8b;&#xff1a;","children":[{"content":"Action: load","children":[],"payload":{"tag":"li","lines":"51,52"}},{"content":"Method: by relation","children":[],"payload":{"tag":"li","lines":"52,53"}},{"content":"Nodes: Parts, Supplier","children":[],"payload":{"tag":"li","lines":"53,54"}},{"content":"Relationship: Supply","children":[],"payload":{"tag":"li","lines":"54,55"}},{"content":"Subject: Intel","children":[],"payload":{"tag":"li","lines":"55,56"}}],"payload":{"tag":"li","lines":"50,56"}},{"content":"&#x76ee;&#x7684;&#xff1a;","children":[{"content":"&#x5efa;&#x7acb;&#x5f37;&#x5316;&#x5f8c;&#x7684; Prompt","children":[],"payload":{"tag":"li","lines":"57,58"}},{"content":"&#x63d0;&#x4f9b; LLM &#x7d50;&#x69cb;&#x5316;&#x80cc;&#x666f;&#x77e5;&#x8b58;","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"&#x5c07;&#x77e5;&#x8b58;&#x5716;&#x8b5c;&#x95dc;&#x806f;&#x7d0d;&#x5165;&#x4e0a;&#x4e0b;&#x6587;","children":[],"payload":{"tag":"li","lines":"59,61"}}],"payload":{"tag":"li","lines":"56,61"}}],"payload":{"tag":"h2","lines":"48,49"}},{"content":"5&#xfe0f;&#x20e3; Query&#xff08;&#x67e5;&#x8a62; Knowledge Datastore&#xff09;","children":[{"content":"&#x5c07;&#x589e;&#x5f37;&#x5f8c;&#x7684;&#x67e5;&#x8a62;&#x9001;&#x5165; Knowledge Datastore","children":[],"payload":{"tag":"li","lines":"64,65"}},{"content":"&#x67e5;&#x8a62;&#x65b9;&#x5f0f;&#xff1a;","children":[{"content":"Graph &#x67e5;&#x8a62;","children":[],"payload":{"tag":"li","lines":"66,67"}},{"content":"&#x95dc;&#x806f;&#x67e5;&#x8a62;","children":[],"payload":{"tag":"li","lines":"67,68"}},{"content":"&#x7bc0;&#x9ede;&#x8207;&#x95dc;&#x4fc2;&#x5206;&#x6790;","children":[],"payload":{"tag":"li","lines":"68,69"}}],"payload":{"tag":"li","lines":"65,69"}},{"content":"&#x76ee;&#x6a19;&#xff1a;","children":[{"content":"&#x53d6;&#x5f97;&#x8207;&#x554f;&#x984c;&#x9ad8;&#x5ea6;&#x76f8;&#x95dc;&#x7684;&#x8cc7;&#x6599;","children":[],"payload":{"tag":"li","lines":"70,72"}}],"payload":{"tag":"li","lines":"69,72"}}],"payload":{"tag":"h2","lines":"63,64"}},{"content":"6&#xfe0f;&#x20e3; Relevant Data Retrieval&#xff08;&#x76f8;&#x95dc;&#x8cc7;&#x6599;&#x64f7;&#x53d6;&#xff09;","children":[{"content":"&#x5f9e; Knowledge Datastore &#x64f7;&#x53d6;&#x76f8;&#x95dc;&#x8cc7;&#x6599;","children":[],"payload":{"tag":"li","lines":"75,76"}},{"content":"&#x53ef;&#x9032;&#x884c;&#xff1a;","children":[{"content":"&#x8996;&#x89ba;&#x5316;&#xff08;Visualization&#xff09;","children":[],"payload":{"tag":"li","lines":"77,78"}},{"content":"Q&amp;A &#x6a21;&#x5f0f;&#x5448;&#x73fe;","children":[],"payload":{"tag":"li","lines":"78,79"}},{"content":"&#x6545;&#x4e8b;&#x578b;&#x751f;&#x6210;&#xff08;Story Generation&#xff09;","children":[],"payload":{"tag":"li","lines":"79,80"}}],"payload":{"tag":"li","lines":"76,80"}},{"content":"&#x4f5c;&#x70ba; LLM &#x7684;&#x88dc;&#x5145;&#x4e0a;&#x4e0b;&#x6587;&#xff08;Context Injection&#xff09;","children":[],"payload":{"tag":"li","lines":"80,82"}}],"payload":{"tag":"h2","lines":"74,75"}},{"content":"7&#xfe0f;&#x20e3; Answer&#xff08;&#x7522;&#x751f;&#x6700;&#x7d42;&#x7b54;&#x6848;&#xff09;","children":[{"content":"LLM &#x7d9c;&#x5408;&#xff1a;","children":[{"content":"&#x4f7f;&#x7528;&#x8005;&#x554f;&#x984c;","children":[],"payload":{"tag":"li","lines":"86,87"}},{"content":"&#x64f7;&#x53d6;&#x8cc7;&#x6599;","children":[],"payload":{"tag":"li","lines":"87,88"}},{"content":"&#x95dc;&#x806f;&#x5206;&#x6790;&#x7d50;&#x679c;","children":[],"payload":{"tag":"li","lines":"88,89"}}],"payload":{"tag":"li","lines":"85,89"}},{"content":"&#x7522;&#x751f;&#x6700;&#x7d42;&#x56de;&#x8986;","children":[],"payload":{"tag":"li","lines":"89,90"}},{"content":"&#x56de;&#x50b3;&#x7d66;&#x4f7f;&#x7528;&#x8005;","children":[],"payload":{"tag":"li","lines":"90,92"}}],"payload":{"tag":"h2","lines":"84,85"}}],"payload":{"tag":"h1","lines":"0,1"}},{"content":"&#x6574;&#x9ad4;&#x6d41;&#x7a0b;&#x7e3d;&#x7d50;","children":[],"payload":{"tag":"h1","lines":"94,95"}}]},{})</script>
+</body>
+</html>
