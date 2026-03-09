@@ -114,11 +114,11 @@ Investment Recommendation
 
 ## Feature Engineering (金融特徵)
 
-- Returns
-- Volatility
-- Risk Score
-- Asset Correlation
-- Market Trend
+- Returns(收益維度)
+- Volatility(風險維度)
+- Risk Score(綜合維度)
+- Asset Correlation(分散維度)
+- Market Trend(環境維度)
 
 ---
 

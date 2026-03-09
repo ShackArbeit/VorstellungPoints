@@ -39,11 +39,11 @@
 - 模型部署
 
 #### C. Data 能力
-- 資料清理
-- 特徵處理
-- 分析與可視化
-- 推論資料流設計
-- 訓練資料管理
+- 資料清理 (Data Cleaning)
+- 特徵處理(Feature Engineering)
+- 分析與可視化(Analysis & Visualization)
+- 推論資料流設計(Inference Pipeline Design)
+- 訓練資料管理(Training Data Management / MLOps)
 
 #### D. Product / Business Integration 能力
 - 整合第三方套件
